@@ -16,41 +16,115 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/enter_name"
         app:endIconMode="clear_text"
-        app:layout_constraintBottom_toTopOf="@+id/generate_button"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_tag_faces_24"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/ic_baseline_tag_faces_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textinputedit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="147dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/generate_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCardOne"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Second"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Layout 1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/btnCardTwo"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.196" />
 
     <Button
-        android:id="@+id/third_btn"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCardTwo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Third"
+        android:layout_marginEnd="16dp"
+        android:text="Layout 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCardOne"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="440dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <Button
+        android:id="@+id/btnCardThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="LAYOUT 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCardFour"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/generate_button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCardOne"
+        app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        android:id="@+id/btnCardFour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="LAYOUT 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCardThree"
+        app:layout_constraintTop_toBottomOf="@+id/btnCardTwo"
+        app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        android:id="@+id/btnCardFIve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="LAYOUT 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCardSix"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCardThree" />
+
+    <Button
+        android:id="@+id/btnCardSix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="LAYOUT 6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCardFIve"
+        app:layout_constraintTop_toBottomOf="@+id/btnCardFour" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

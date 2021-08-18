@@ -10,10 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Birthday_card2O">
         <activity
-            android:name=".third_activity"
+            android:name=".LayoutSix"
             android:exported="true" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".LayoutFive"
+            android:exported="true" />
+        <activity
+            android:name=".LayoutFour"
+            android:exported="true" />
+        <activity
+            android:name=".LayoutThree"
+            android:exported="true" />
+        <activity
+            android:name=".LayoutTwo"
+            android:exported="true" />
+        <activity
+            android:name=".LayoutOne"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

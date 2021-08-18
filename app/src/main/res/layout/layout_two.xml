@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232020"
-    tools:context=".SecondActivity">
+    android:background="@color/white"
+    tools:context=".LayoutTwo">
 
     <TextView
-        android:id="@+id/tvReceive"
+        android:id="@+id/tvReceiveTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:fontFamily="sans-serif-medium"
+        android:text="CHEERS 3"
+        android:background="@color/black"
         android:padding="16dp"
-        android:text="Cheers"
-        android:textColor="#FFD966"
-        android:textSize="24sp"
         android:textStyle="italic|bold"
+        android:textSize="16sp"
+        android:textColor="#F4B140"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -25,14 +24,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_template"
+        android:id="@+id/btnLayoutTwoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Templates"
+        android:layout_marginBottom="104dp"
+        android:text="Back to Homepage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceive" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiveTwo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

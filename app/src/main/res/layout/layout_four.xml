@@ -4,13 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".third_activity">
+    android:background="#DDEF27"
+    tools:context=".LayoutFour">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvReceiveFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHEERS 3"
+        android:background="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="Cheers"
+        android:textColor="#FF4081"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -18,13 +25,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_first"
+        android:id="@+id/btnLayoutFourBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Third to first"
+        android:text="Back to Home Page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFour" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

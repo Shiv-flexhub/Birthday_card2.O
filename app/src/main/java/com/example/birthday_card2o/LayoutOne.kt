@@ -3,16 +3,20 @@ package com.example.birthday_card2o
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.birthday_card2o.databinding.ActivitySecondBinding
-import com.example.birthday_card2o.databinding.ActivityThirdBinding
+import com.example.birthday_card2o.databinding.LayoutOneBinding
 
-class third_activity : AppCompatActivity() {
-    private lateinit var binding: ActivityThirdBinding
+class LayoutOne : AppCompatActivity() {
+
+    private lateinit var binding: LayoutOneBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityThirdBinding.inflate(layoutInflater)
+        binding= LayoutOneBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnFirst.setOnClickListener {
+
+        val nameOne = intent.getStringExtra("EXTRA_NAME")
+        binding.tvReceiveOne.text = "Happy Birthday $nameOne!!!"
+
+        binding.btnLayoutOneBack.setOnClickListener {
             Intent(this,MainActivity::class.java).also {
                 startActivity(it)
             }

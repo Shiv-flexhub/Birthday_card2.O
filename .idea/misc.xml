@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/activity_main.xml" value="0.6" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/activity_second.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/activity_second.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/activity_third.xml" value="0.5" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_five.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_four.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_one.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_six.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_three.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/layout_two.xml" value="0.1585144927536232" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Birthday_card2O/app/src/main/res/layout/laypout_two.xml" value="0.14402173913043478" />
       </map>
     </option>
   </component>
