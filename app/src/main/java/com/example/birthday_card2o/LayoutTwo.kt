@@ -50,6 +50,8 @@ class LayoutTwo : AppCompatActivity() {
                 // Step 5: Get URI of saved image
                 val uri = Uri.parse(path)
 
+                intent.putExtra(Intent.EXTRA_TEXT, "Happy Birthday $nameTwo")
+
                 // Step 6: Put Uri as extra to share intent
                 intent.putExtra(Intent.EXTRA_STREAM, uri)
 
