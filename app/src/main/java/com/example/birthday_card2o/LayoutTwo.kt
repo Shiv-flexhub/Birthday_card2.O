@@ -35,7 +35,7 @@ class LayoutTwo : AppCompatActivity() {
         }
 
         binding.btnShareTwo.setOnClickListener{
-                // Step 1: Create Share itent
+                // Step 1: Create Share intent
                 val intent = Intent(Intent.ACTION_SEND).setType("image/*")
 
                 // Step 2: Get Bitmap Drawable file from imageView

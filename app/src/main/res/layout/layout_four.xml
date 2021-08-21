@@ -7,6 +7,17 @@
     android:background="#DDEF27"
     tools:context=".LayoutFour">
 
+    <ImageView
+        android:id="@+id/ivLayoutFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/layout1"
+        app:layout_constraintBottom_toTopOf="@+id/tvReceiveFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvReceiveFour"
         android:layout_width="wrap_content"
@@ -34,5 +45,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvReceiveFour" />
+
+    <Button
+        android:id="@+id/btnShareFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLayoutFourBack"
+        app:layout_constraintVertical_bias="0.187" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
