@@ -4,19 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232020"
+    android:padding="20dp"
     tools:context=".LayoutOne">
 
-    <ImageView
-        android:id="@+id/ivLayoutOne"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/layout1"
-        app:layout_constraintBottom_toTopOf="@+id/tvReceiveOne"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLayoutOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/layout3"
+            app:layout_constraintBottom_toTopOf="@+id/tvReceiveOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvReceiveOne"
@@ -26,35 +38,40 @@
         android:fontFamily="sans-serif-medium"
         android:padding="16dp"
         android:text="Cheers"
-        android:textColor="#FFD966"
+        android:textColor="#252525"
         android:textSize="24sp"
         android:textStyle="italic|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLayoutOneBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLayoutOneBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Home Page"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnShareOne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvReceiveOne" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShareOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Share"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLayoutOneBack"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLayoutOneBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
