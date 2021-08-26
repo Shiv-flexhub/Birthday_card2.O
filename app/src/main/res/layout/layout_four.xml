@@ -40,27 +40,27 @@
         android:padding="16dp"
         android:text="Cheers"
         android:textColor="#252525"
-        android:textSize="24sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLayoutFourBack"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnShareFour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLayoutFourBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textColor="@color/black"
-        android:textAllCaps="false"
-        android:background="@drawable/custom_button2"
-        app:layout_constraintBottom_toTopOf="@+id/btnShareFour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFour" />
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnLayoutFourBack"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Home"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:background="@drawable/custom_button2"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnShareFour"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFour" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShareFour"
@@ -74,6 +74,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLayoutFourBack" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFour" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

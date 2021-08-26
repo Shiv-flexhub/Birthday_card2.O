@@ -26,37 +26,42 @@ class LayoutTwo : AppCompatActivity() {
         setContentView(binding.root)
 
         val nameTwo = intent.getStringExtra("EXTRA_NAME")
-        binding.tvReceiveTwo.text = "Happy Birthday $nameTwo!!"
+        binding.tvReceiveTwo.text = "Click on share to get a birthday quote along"
 
-        binding.btnLayoutTwoBack.setOnClickListener {
-            Intent(this,MainActivity::class.java).also {
-                startActivity(it)
-            }
-        }
 
-        binding.btnShareTwo.setOnClickListener{
-                // Step 1: Create Share intent
-                val intent = Intent(Intent.ACTION_SEND).setType("image/*")
 
-                // Step 2: Get Bitmap Drawable file from imageView
-                val bitmapDrawable = binding.ivLayoutTwo.drawable.toBitmap() // your imageView here.
+        binding.btnShareTwo.setOnClickListener {
+            // Step 1: Create Share intent
+            val intent = Intent(Intent.ACTION_SEND).setType("image/*")
 
-                /* Step 3: Convert Drawable File to Bitmap
-                val bitmap=bitmapDrawable.bitmap */
+            // Step 2: Get Bitmap Drawable file from imageView
+            val bitmapDrawable = binding.ivLayoutTwo.drawable.toBitmap() // your imageView here.
 
-                // Step 4: Save image & get path of it
-                val path = MediaStore.Images.Media.insertImage(contentResolver, bitmapDrawable, "tempimage", null)
+            /* Step 3: Convert Drawable File to Bitmap
+            val bitmap=bitmapDrawable.bitmap */
 
-                // Step 5: Get URI of saved image
-                val uri = Uri.parse(path)
+            // Step 4: Save image & get path of it
+            val path = MediaStore.Images.Media.insertImage(
+                contentResolver,
+                bitmapDrawable,
+                "tempimage",
+                null
+            )
 
-                intent.putExtra(Intent.EXTRA_TEXT, "Happy Birthday $nameTwo")
+            // Step 5: Get URI of saved image
+            val uri = Uri.parse(path)
 
-                // Step 6: Put Uri as extra to share intent
-                intent.putExtra(Intent.EXTRA_STREAM, uri)
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Just wanted to be the first one to wish you happy birthday so I can feel superior " +
+                        "to your other well-wishers. So,Happiest Birthday *_${nameTwo}_*"
+            )
 
-                // Step 7: Start Activity with chooser and pass the intent
-                startActivity(Intent.createChooser(intent,"Share Image"))
+            // Step 6: Put Uri as extra to share intent
+            intent.putExtra(Intent.EXTRA_STREAM, uri)
+
+            // Step 7: Start Activity with chooser and pass the intent
+            startActivity(Intent.createChooser(intent, "Share Image"))
 
         }
     }

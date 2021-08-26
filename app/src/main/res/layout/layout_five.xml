@@ -39,26 +39,26 @@
         android:text="Cheers"
         android:textAllCaps="false"
         android:textColor="#232323"
-        android:textSize="24sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLayoutFiveBack"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLayoutFiveBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textAllCaps="false"
-        android:background="@drawable/custom_button2"
-        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnLayoutFiveBack"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Home"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:background="@drawable/custom_button2"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShareFive"
@@ -72,6 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLayoutFiveBack" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
