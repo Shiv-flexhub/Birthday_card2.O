@@ -14,6 +14,7 @@ import androidx.core.graphics.drawable.toBitmap
 import com.example.birthday_card2o.databinding.ActivityMainBinding.bind
 import com.example.birthday_card2o.databinding.ActivityMainBinding.inflate
 import com.example.birthday_card2o.databinding.LayoutTwoBinding
+import com.google.android.gms.ads.*
 import java.io.ByteArrayOutputStream
 import java.io.File
 
@@ -24,6 +25,22 @@ class LayoutTwo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = LayoutTwoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this){} //Banner Ads Initialization
+
+        val adView = AdView(this) //
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView2.loadAd(adRequest)
+
+        binding.adView2.adListener= object : AdListener(){
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+            }
+        }
 
         val nameTwo = intent.getStringExtra("EXTRA_NAME")
         binding.tvReceiveTwo.text = "Click on share to get a birthday quote along"

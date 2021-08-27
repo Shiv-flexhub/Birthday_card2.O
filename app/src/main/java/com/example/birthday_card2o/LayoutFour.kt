@@ -8,6 +8,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import androidx.core.graphics.drawable.toBitmap
 import com.example.birthday_card2o.databinding.LayoutFourBinding
+import com.google.android.gms.ads.*
 
 class LayoutFour : AppCompatActivity() {
 
@@ -16,6 +17,22 @@ class LayoutFour : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = LayoutFourBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this){} //Banner Ads Initialization
+
+        val adView = AdView(this) //
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView4.loadAd(adRequest)
+
+        binding.adView4.adListener= object : AdListener(){
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+            }
+        }
 
         val nameFour = intent.getStringExtra("EXTRA_NAME")
         binding.tvReceiveFour.text = "Click on share to get a birthday quote along"

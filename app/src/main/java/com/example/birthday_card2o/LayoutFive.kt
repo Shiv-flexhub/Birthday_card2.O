@@ -8,6 +8,7 @@ import android.provider.MediaStore
 import androidx.core.graphics.drawable.toBitmap
 import com.example.birthday_card2o.databinding.LayoutFiveBinding
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.MobileAds
 
 class LayoutFive : AppCompatActivity() {
     private lateinit var binding: LayoutFiveBinding
@@ -16,10 +17,9 @@ class LayoutFive : AppCompatActivity() {
         binding = LayoutFiveBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        MobileAds.initialize(this){}
+        MobileAds.initialize(this){} //Banner Ads Initialization
 
-        //Banner Ads Initialization
-        val adView = AdView(this)
+        val adView = AdView(this) //
         adView.adSize = AdSize.BANNER
         adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
 

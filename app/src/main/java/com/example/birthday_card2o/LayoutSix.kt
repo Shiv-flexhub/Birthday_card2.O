@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.core.graphics.drawable.toBitmap
 import com.example.birthday_card2o.databinding.LayoutSixBinding
+import com.google.android.gms.ads.*
 
 class LayoutSix : AppCompatActivity() {
     private lateinit var binding: LayoutSixBinding
@@ -14,6 +15,22 @@ class LayoutSix : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = LayoutSixBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this){} //Banner Ads Initialization
+
+        val adView = AdView(this) //
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView6.loadAd(adRequest)
+
+        binding.adView6.adListener= object : AdListener(){
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+            }
+        }
 
         val nameSix = intent.getStringExtra("EXTRA_NAME")
         binding.tvReceiveSix.text = "Click on share to get a birthday quote along"
@@ -36,15 +53,18 @@ class LayoutSix : AppCompatActivity() {
             // Step 5: Get URI of saved image
             val uri = Uri.parse(path)
 
-            intent.putExtra(Intent.EXTRA_TEXT, "Sending you a birthday wish wrapped with all my " +
-                    "love. Have a wonderful day and prosperous years to come ahead. Happy birthday!" +
-                    " *_${nameSix}_*")
+                intent.putExtra(
+                    Intent.EXTRA_TEXT, "Sending you a birthday wish wrapped with all my " +
+                            "love. Have a wonderful day and prosperous years to come ahead. Happy birthday!" +
+                            " *_${nameSix}_*"
+                )
 
-            // Step 6: Put Uri as extra to share intent
-            intent.putExtra(Intent.EXTRA_STREAM, uri)
+                // Step 6: Put Uri as extra to share intent
+                intent.putExtra(Intent.EXTRA_STREAM, uri)
 
-            // Step 7: Start Activity with chooser and pass the intent
-            startActivity(Intent.createChooser(intent,"Share Image"))
+                // Step 7: Start Activity with chooser and pass the intent
+                startActivity(Intent.createChooser(intent, "Share Image"))
+
 
         }
     }
