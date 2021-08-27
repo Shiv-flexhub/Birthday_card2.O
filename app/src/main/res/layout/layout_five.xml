@@ -41,37 +41,51 @@
         android:textColor="#232323"
         android:textSize="24sp"
         android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLayoutFiveBack"
+        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLayoutFiveBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textAllCaps="false"
-        android:background="@drawable/custom_button2"
-        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnLayoutFiveBack"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/custom_button2"-->
+<!--        android:text="Home"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShareFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
+        android:background="@drawable/custom_button4"
         android:text="Share"
         android:textAllCaps="false"
-        android:background="@drawable/custom_button4"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLayoutFiveBack" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

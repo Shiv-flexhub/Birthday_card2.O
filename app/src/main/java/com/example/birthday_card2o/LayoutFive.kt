@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import androidx.core.graphics.drawable.toBitmap
 import com.example.birthday_card2o.databinding.LayoutFiveBinding
+import com.google.android.gms.ads.*
 
 class LayoutFive : AppCompatActivity() {
     private lateinit var binding: LayoutFiveBinding
@@ -15,14 +16,27 @@ class LayoutFive : AppCompatActivity() {
         binding = LayoutFiveBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val nameFive = intent.getStringExtra("EXTRA_NAME")
-        binding.tvReceiveFive.text = "Happy born day \n $nameFive"
+        MobileAds.initialize(this){}
 
-        binding.btnLayoutFiveBack.setOnClickListener {
-            Intent(this,MainActivity::class.java).also {
-                startActivity(it)
+        //Banner Ads Initialization
+        val adView = AdView(this)
+        adView.adSize = AdSize.BANNER
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView5.loadAd(adRequest)
+
+        binding.adView5.adListener= object : AdListener(){
+            override fun onAdLoaded() {
+                super.onAdLoaded()
             }
         }
+
+        val nameFive = intent.getStringExtra("EXTRA_NAME")
+        binding.tvReceiveFive.text = "Click on share to get a birthday quote along"
+
+
 
         binding.btnShareFive.setOnClickListener{
             // Step 1: Create Share intent
@@ -40,7 +54,9 @@ class LayoutFive : AppCompatActivity() {
             // Step 5: Get URI of saved image
             val uri = Uri.parse(path)
 
-            intent.putExtra(Intent.EXTRA_TEXT, "Happy Birthday $nameFive")
+            intent.putExtra(Intent.EXTRA_TEXT, "You are the sweetest person I know, and this birthday" +
+                    " is a fresh beginning. I wish you confidence, courage, and capability. " +
+                    "Happy bornday *_${nameFive}_*!!@@!!")
 
             // Step 6: Put Uri as extra to share intent
             intent.putExtra(Intent.EXTRA_STREAM, uri)
