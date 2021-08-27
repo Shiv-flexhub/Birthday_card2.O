@@ -16,13 +16,9 @@ class LayoutSix : AppCompatActivity() {
         setContentView(binding.root)
 
         val nameSix = intent.getStringExtra("EXTRA_NAME")
-        binding.tvReceiveSix.text = "Many many happy returns of the day dear $nameSix"
+        binding.tvReceiveSix.text = "Click on share to get a birthday quote along"
 
-        binding.btnLayoutSixBack.setOnClickListener {
-            Intent(this, MainActivity::class.java).also {
-                startActivity(it)
-            }
-        }
+
 
         binding.btnShareSix.setOnClickListener{
             // Step 1: Create Share intent
@@ -40,7 +36,9 @@ class LayoutSix : AppCompatActivity() {
             // Step 5: Get URI of saved image
             val uri = Uri.parse(path)
 
-            intent.putExtra(Intent.EXTRA_TEXT, "Happy Birthday $nameSix")
+            intent.putExtra(Intent.EXTRA_TEXT, "Sending you a birthday wish wrapped with all my " +
+                    "love. Have a wonderful day and prosperous years to come ahead. Happy birthday!" +
+                    " *_${nameSix}_*")
 
             // Step 6: Put Uri as extra to share intent
             intent.putExtra(Intent.EXTRA_STREAM, uri)

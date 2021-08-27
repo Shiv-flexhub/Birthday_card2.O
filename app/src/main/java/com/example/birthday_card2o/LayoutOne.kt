@@ -13,19 +13,15 @@ class LayoutOne : AppCompatActivity() {
     private lateinit var binding: LayoutOneBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= LayoutOneBinding.inflate(layoutInflater)
+        binding = LayoutOneBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val nameOne = intent.getStringExtra("EXTRA_NAME")
-        binding.tvReceiveOne.text = "Happy Birthday $nameOne!!!"
+        binding.tvReceiveOne.text = "Click on share to get a birthday quote along"
 
-        binding.btnLayoutOneBack.setOnClickListener {
-            Intent(this,MainActivity::class.java).also {
-                startActivity(it)
-            }
-        }
 
-        binding.btnShareOne.setOnClickListener{
+
+        binding.btnShareOne.setOnClickListener {
             // Step 1: Create Share intent
             val intent = Intent(Intent.ACTION_SEND).setType("image/*")
 
@@ -36,18 +32,28 @@ class LayoutOne : AppCompatActivity() {
             val bitmap=bitmapDrawable.bitmap */
 
             // Step 4: Save image & get path of it
-            val path = MediaStore.Images.Media.insertImage(contentResolver, bitmapDrawable, "tempimage", null)
+            val path = MediaStore.Images.Media.insertImage(
+                contentResolver,
+                bitmapDrawable,
+                "tempimage",
+                null
+            )
 
             // Step 5: Get URI of saved image
             val uri = Uri.parse(path)
 
-            intent.putExtra(Intent.EXTRA_TEXT, "Happy Birthday $nameOne")
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Count not the candles…see the lights they give. Count not the " +
+                        "years, but the life you live. Wishing you a wonderful time ahead. Happy birthday " +
+                        "*_${nameOne}_*!!!"
+            )
 
             // Step 6: Put Uri as extra to share intent
             intent.putExtra(Intent.EXTRA_STREAM, uri)
 
             // Step 7: Start Activity with chooser and pass the intent
-            startActivity(Intent.createChooser(intent,"Share Image"))
+            startActivity(Intent.createChooser(intent, "Share Image"))
 
         }
     }
