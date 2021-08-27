@@ -47,32 +47,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/btnLayoutFiveBack"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/custom_button2"-->
-<!--        android:text="Home"-->
-<!--        android:textAllCaps="false"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />-->
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/btnLayoutFiveBack"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/custom_button2"-->
+    <!--        android:text="Home"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btnShareFive"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />-->
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnShareFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/custom_button4"
         android:text="Share"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/adView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceiveFive" />
+        app:layout_constraintTop_toBottomOf="@id/tvReceiveFive"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView5"
@@ -86,6 +87,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
