@@ -17,6 +17,4 @@ simultaneously wants to contribute to Open-Source.
 
 Come lets together build this up to new heights.
 
-Shiva Chaubey: shivachaubey01@gmail.com
-Debayan Ghosh Dastider: debz.exe@gmail.com
-Madhur Mehta: 12madhurmehta@gmail.com
+Shiva Chaubey: shivachaubey01@gmail.com | Debayan Ghosh Dastider: debz.exe@gmail.com | Madhur Mehta: 12madhurmehta@gmail.com
